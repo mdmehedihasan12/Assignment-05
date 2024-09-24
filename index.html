@@ -35,29 +35,35 @@
     </script>
   </head>
   <body class="font-primaryFont">
-    <header class="bg-bodyBg">
-      <nav class="max-w-7xl px-3 mx-auto flex justify-between py-9">
-        <div class="flex justify-center items-center">
-          <button class="btn bg-btnBg">Blog</button>
-        </div>
-        <div class="hidden md:flex justify-center items-center gap-2">
-          <img src="assets/logo.png" alt="" />
-          <p>Donate Bangladesh</p>
-        </div>
-        <div class="flex justify-center items-center gap-2">
-          <img src="assets/coin.png" alt="" />
-          <p id="my-balance">5500</p>
-          <p>BDT</p>
-        </div>
-      </nav>
+    <header class="sticky top-0 pb-5 backdrop-blur-lg">
+      <div class="bg-bodyBg/70">
+        <nav class="max-w-7xl px-3 mx-auto flex justify-between py-9">
+          <div class="flex justify-center items-center">
+            <button class="btn bg-btnBg">Blog</button>
+          </div>
+          <div class="hidden md:flex justify-center items-center gap-2">
+            <img src="assets/logo.png" alt="" />
+            <p>Donate Bangladesh</p>
+          </div>
+          <div class="flex justify-center items-center gap-2">
+            <img src="assets/coin.png" alt="" />
+            <p id="my-balance">5500</p>
+            <p>BDT</p>
+          </div>
+        </nav>
+      </div>
+      <div>
+        <section class="sticky top-0">
+          <div class="flex justify-center gap-2 mt-20">
+            <button id="donation-btn" class="btn bg-btnBg border-[2px]">
+              Donation
+            </button>
+            <button id="history-btn" class="btn border-[2px]">History</button>
+          </div>
+        </section>
+      </div>
     </header>
     <main class="max-w-7xl mx-auto">
-      <section>
-        <div class="flex justify-center gap-2 mt-20">
-          <button id="donation-btn" class="btn bg-btnBg border-[2px]">Donation</button>
-          <button id="history-btn" class="btn border-[2px]">History</button>
-        </div>
-      </section>
       <div id="donation-form" class="">
         <section class="border rounded-2xl py-5 px-3 mt-8">
           <div
@@ -96,21 +102,9 @@
                 />
               </div>
               <div>
-                <button  id="n-donate-btn" class="btn bg-btnBg w-11/12">
+                <button id="n-donate-btn" class="btn bg-btnBg w-11/12">
                   Donate Now
                 </button>
-                <dialog id="my_modal_1" class="hidden modal modal-bottom sm:modal-middle">
-                  <div class="modal-box">
-                    <h3 class="text-lg font-bold">Hello!</h3>
-                    <p class="py-4">Press ESC key or click the button below to close</p>
-                    <div class="modal-action">
-                      <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn">Close</button>
-                      </form>
-                    </div>
-                  </div>
-                </dialog>
               </div>
             </div>
           </div>
@@ -200,14 +194,9 @@
                 />
               </div>
               <div>
-                <button
-                  id="q-button"
-                  
-                  class="btn bg-btnBg w-11/12"
-                >
+                <button id="q-button" class="btn bg-btnBg w-11/12">
                   Donate Now
                 </button>
-                
               </div>
             </div>
           </div>
@@ -215,22 +204,29 @@
         <section>
           <!-- model section -->
           <div>
-           
-            
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn" onclick="my_modal_1.showModal()">
+              open modal
+            </button>
+            <dialog id="my_modal_1" class="modal">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">
+                  Press ESC key or click the button below to close
+                </p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </section>
       </div>
       <!-- history section -->
-      <section id="history-form" class="hidden mt-36 p-5 ">
-        <div id="n-history" class="border py-6 px-5 rounded-xl mt-4">
-          
-        </div>
-        <div id="f-history" class="border py-6 px-5 rounded-xl mt-4">
-          
-        </div>
-        <div id="q-history" class="border py-6 px-5 rounded-xl mt-4">
-          
-        </div>
+      <section id="history-form" class="hidden mt-36 p-5">  
       </section>
     </main>
     <script src="js/app.js"></script>
