@@ -96,9 +96,21 @@
                 />
               </div>
               <div>
-                <button id="n-donate-btn" class="btn bg-btnBg w-11/12">
+                <button  id="n-donate-btn" class="btn bg-btnBg w-11/12">
                   Donate Now
                 </button>
+                <dialog id="my_modal_1" class="hidden modal modal-bottom sm:modal-middle">
+                  <div class="modal-box">
+                    <h3 class="text-lg font-bold">Hello!</h3>
+                    <p class="py-4">Press ESC key or click the button below to close</p>
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
               </div>
             </div>
           </div>
@@ -195,20 +207,7 @@
                 >
                   Donate Now
                 </button>
-                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                  <div class="modal-box">
-                    <h3 class="text-lg font-bold">Hello!</h3>
-                    <p class="py-4">
-                      Press ESC key or click the button below to close
-                    </p>
-                    <div class="modal-action">
-                      <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn">Close</button>
-                      </form>
-                    </div>
-                  </div>
-                </dialog>
+                
               </div>
             </div>
           </div>
@@ -222,18 +221,15 @@
         </section>
       </div>
       <!-- history section -->
-      <section id="history-form" class="hidden mt-36 p-5">
-        <div>
-          <h1>Taka is Donated for famine-2024 at Feni, Bangladesh</h1>
-          <p></p>
+      <section id="history-form" class="hidden mt-36 p-5 ">
+        <div id="n-history" class="border py-6 px-5 rounded-xl mt-4">
+          
         </div>
-        <div>
-          <h1></h1>
-          <p></p>
+        <div id="f-history" class="border py-6 px-5 rounded-xl mt-4">
+          
         </div>
-        <div>
-          <h1></h1>
-          <p></p>
+        <div id="q-history" class="border py-6 px-5 rounded-xl mt-4">
+          
         </div>
       </section>
     </main>
