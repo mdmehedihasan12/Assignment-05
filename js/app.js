@@ -1,4 +1,5 @@
-const blogBtn = document.getElementById("");
+const blogBtn = document.getElementById("blog-btn");
+const homeBtn = document.getElementById('home-btn');
 const myBalance = document.getElementById("my-balance").innerText;
 const donationBtn = document.getElementById("donation-btn");
 const historyBtn = document.getElementById("history-btn");
@@ -83,7 +84,7 @@ document.getElementById("f-button").addEventListener("click", function (event) {
     const div = document.createElement('div')
     div.className =  'border py-6 px-5 rounded-xl mt-4'
     div.innerHTML = `
-      <h1>${fInputNumber} Tk is Donated for famine-2024 at Noakhali, Bangladesh</h1>
+      <h1>${fInputNumber} Tk is Donated for famine-2024 at Feni, Bangladesh</h1>
       <p>${new Date()}</p>
     `
     document.getElementById("history-form").appendChild(div);
@@ -120,7 +121,7 @@ document.getElementById("q-button").addEventListener("click", function (event) {
     const div = document.createElement('div')
     div.className =  'border py-6 px-5 rounded-xl mt-4'
     div.innerHTML = `
-      <h1>${qInputNumber} Tk is Donated for famine-2024 at Noakhali, Bangladesh</h1>
+      <h1>${qInputNumber} Tk is Donated for Aid for Injured in the Quota Movement, Bangladesh</h1>
       <p>${new Date()}</p>
     `
     document.getElementById("history-form").appendChild(div);
@@ -152,3 +153,33 @@ document
     document.getElementById("donation-btn").classList.remove("bg-btnBg");
     document.getElementById("history-btn").classList.add("bg-btnBg");
   });
+
+
+
+
+
+ 
+// document.getElementById('home-btn').addEventListener('click', function (event) {
+//   // event.preventDefault();
+//  window.location.href = './index.html'
+//   console.log("hi")
+// })
+document.getElementById('blog-btn').addEventListener('click', function (event) {
+  // event.preventDefault();
+ window.location.href = './home.html'
+  console.log("hi")
+})
+
+
+
+document.getElementById('home-btn').addEventListener('click', function (event) {
+  // event.preventDefault();
+ window.location.href = './index.html'
+  console.log("hi")
+})
+
+
+// function homePage(){
+// //      window.location.href = './home.html'
+// // }
+
